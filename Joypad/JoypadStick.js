@@ -122,7 +122,11 @@ cc.Class({
 			dx = cosAngle * this.JoystickRadius; // ジョイスティック表示位置のx座標を計算
 			dy = sinAngle * this.JoystickRadius; // ジョイスティック表示位置のy座標を計算
 		}
-		this._velocity = cc.p(cosAngle, sinAngle); // スティックの値を設定（値の範囲 x:-1.0〜1.0, y:-1.0〜1.0）
+		if(this.isDPad){
+		    this._velocity = cc.p(cosAngle, sinAngle); // スティックの値を設定（値の範囲 x:-1.0〜1.0, y:-1.0〜1.0）
+		} else {
+		    this._velocity = cc.p(dx / this.JoystickRadius, dy / this.JoystickRadius); // スティックの値を設定（値の範囲 x:-1.0〜1.0, y:-1.0〜1.0）
+		}
 		this._degrees = angle * this.SJ_RAD2DEG; // ラジアンから角度を計算
 		this._stickPosition = cc.p(dx, dy); // ジョイスティックの表示位置を設定
 	},
