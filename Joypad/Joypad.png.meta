@@ -1,0 +1,28 @@
+{
+  "ver": "1.0.0",
+  "uuid": "f40c67f2-ed37-46fa-bc0e-120216147586",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "Joypad": {
+      "ver": "1.0.2",
+      "uuid": "a5d454e8-1a8a-413e-b0f3-cef1d7f7341a",
+      "rawTextureUuid": "f40c67f2-ed37-46fa-bc0e-120216147586",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -62,
+      "offsetY": 54,
+      "trimX": 3,
+      "trimY": 3,
+      "width": 126,
+      "height": 398,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

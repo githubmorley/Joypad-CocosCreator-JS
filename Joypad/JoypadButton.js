@@ -5,6 +5,7 @@ cc.Class({
         defaultSF: { // デフォルト状態の画像
             default: null, // デフォルト値
             type: cc.SpriteFrame, // cc.SpriteFrame型
+            visible: false, // 『Proeperties』パネルに表示しない
         },
         disabledSF: { // 無効状態の画像
             default: null, // デフォルト値
@@ -36,8 +37,7 @@ cc.Class({
     onLoad: function () { // 初期化処理
         this._rateLimit = 1 / this.FPS; // ボタンONの時間を計算
         this._spriteButton = this.node.addComponent(cc.Sprite); // ノードに追加したコンポーネントを取得
-        this._spriteButton.spriteFrame = this.defaultSF;  // デフォルト状態の画像を表示
-        this._spriteButton.sizeMode = cc.Sprite.SizeMode.RAW; // スプライトのサイズモードを設定（RAW：画像そのままのサイズ）
+        this.defaultSF = this._spriteButton.spriteFrame; // デフォルトのスプライトフレームの取得
         this._centerPosition = cc.p( // ボタンの中心を計算
             this.node.getContentSize().width / 2,
             this.node.getContentSize().height / 2);

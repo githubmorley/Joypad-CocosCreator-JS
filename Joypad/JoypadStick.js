@@ -20,14 +20,6 @@ cc.Class({
             visible: false, // 『Proeperties』パネルに表示しない
             readonly: true, // 読み取りのみ
         },
-        BackgroundSF: { // ジョイスティックの背景のスプライトフレーム
-            default: null, // デフォルト値
-            type: cc.SpriteFrame, // cc.SpriteFrame型
-        },
-        ThumbSF: { // ジョイスティックの親指部分のスプライトフレーム
-            default: null, // デフォルト値
-            type: cc.SpriteFrame,
-        },
         Thumb: { // ジョイスティックの部分のノード
             default: null, // デフォルト値
             type: cc.Node, // cc.Node型
@@ -54,14 +46,10 @@ cc.Class({
 	    _centerPosition: cc.Vec2.ZERO, // ジョイスティックの中心座標
 	    _running: false, // ループ実行中フラグ、true:実行中、false：停止中
     },
-
     // 初期化処理
     onLoad: function () {
         this._DeadRadiusSq = Math.pow(this.DeadRadius, 2);　// デッドゾーンの半径の２乗を計算
-        // 背景画像の追加
-        var background = this.node.addComponent(cc.Sprite); // ノードにコンポーネントを追加
-        background.spriteFrame = this.BackgroundSF; // スプライトに画像を設定
-        background.sizeMode = cc.Sprite.SizeMode.RAW; // スプライトのサイズモードを設定（RAW：画像そのままのサイズ）
+        // ジョイスティックのタッチの有効範囲
         this._centerPosition = cc.p( // ジョイスティックの中心座標を取得
             this.node.getContentSize().width / 2, // 背景画像の幅の1/2
             this.node.getContentSize().height / 2); // 背景画像の高さの1/2
@@ -69,13 +57,9 @@ cc.Class({
             this.JoystickRadius = this._centerPosition.x; // 半径を画像の幅の1/2に設定
         }
         this._JoystickRadiusSq = Math.pow(this.JoystickRadius, 2); // 半径の２乗を計算
-        // 親指部分の画像の設定
-        this.Thumb = new cc.Node("thumb"); // 名前をつけてノードを作成
-        var component = this.Thumb.addComponent(cc.Sprite); //ノードにコンポーネントを追加
-        component.spriteFrame = this.ThumbSF; // スプライトに画像を設定
-        component.sizeMode = cc.Sprite.SizeMode.RAW // スプライトのサイズモードを設定（RAW：画像そのままのサイズ
-        this.Thumb.parent = this.node; // 親ノードを設定
-        
+        // 親指のスプライトの取得
+        this.Thumb = this.node.getChildByName("Thumb"); // "Thumb"ノードを取得
+      
         cc.eventManager.addListener({ // タッチイベントを登録
             event: cc.EventListener.TOUCH_ONE_BY_ONE, // シングルタッチのみ対応
             swallowTouches:false, // false:以降のノードにタッチイベントを渡す
