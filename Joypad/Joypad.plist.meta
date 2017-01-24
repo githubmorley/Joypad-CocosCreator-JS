@@ -1,5 +1,5 @@
 {
-  "ver": "1.2.0",
+  "ver": "1.2.4",
   "uuid": "0b958ee5-d874-4bb6-b795-173f5e4ffc17",
   "rawTextureUuid": "f40c67f2-ed37-46fa-bc0e-120216147586",
   "size": {
@@ -7,10 +7,9 @@
     "height": 512
   },
   "type": "Texture Packer",
-  "rawTextureUrl": "db://assets/Joypad/Joypad.png",
   "subMetas": {
     "button_disabled.png": {
-      "ver": "1.0.2",
+      "ver": "1.0.3",
       "uuid": "04e99314-f9a0-4e1e-adf6-e5f14b0d288e",
       "rawTextureUuid": "f40c67f2-ed37-46fa-bc0e-120216147586",
       "trimType": "auto",
@@ -22,6 +21,8 @@
       "trimY": 134,
       "width": 64,
       "height": 64,
+      "rawWidth": 64,
+      "rawHeight": 64,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,
@@ -30,7 +31,7 @@
       "subMetas": {}
     },
     "button_normal.png": {
-      "ver": "1.0.2",
+      "ver": "1.0.3",
       "uuid": "2877526c-d3a1-4290-9e30-f14ca9c1aa10",
       "rawTextureUuid": "f40c67f2-ed37-46fa-bc0e-120216147586",
       "trimType": "auto",
@@ -42,6 +43,8 @@
       "trimY": 202,
       "width": 64,
       "height": 64,
+      "rawWidth": 64,
+      "rawHeight": 64,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,
@@ -50,7 +53,7 @@
       "subMetas": {}
     },
     "button_pressed.png": {
-      "ver": "1.0.2",
+      "ver": "1.0.3",
       "uuid": "4900cd10-cd35-4fd2-b541-10ebbd0760be",
       "rawTextureUuid": "f40c67f2-ed37-46fa-bc0e-120216147586",
       "trimType": "auto",
@@ -62,6 +65,8 @@
       "trimY": 270,
       "width": 64,
       "height": 64,
+      "rawWidth": 64,
+      "rawHeight": 64,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,
@@ -70,7 +75,7 @@
       "subMetas": {}
     },
     "joystick_background.png": {
-      "ver": "1.0.2",
+      "ver": "1.0.3",
       "uuid": "120c59aa-8164-4435-a3ef-ac9b64cf3d95",
       "rawTextureUuid": "f40c67f2-ed37-46fa-bc0e-120216147586",
       "trimType": "auto",
@@ -82,6 +87,8 @@
       "trimY": 2,
       "width": 128,
       "height": 128,
+      "rawWidth": 128,
+      "rawHeight": 128,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,
@@ -90,7 +97,7 @@
       "subMetas": {}
     },
     "joystick_thumb.png": {
-      "ver": "1.0.2",
+      "ver": "1.0.3",
       "uuid": "08dfc51f-5696-4a9f-b1a7-72c282ff25f6",
       "rawTextureUuid": "f40c67f2-ed37-46fa-bc0e-120216147586",
       "trimType": "auto",
@@ -102,6 +109,8 @@
       "trimY": 338,
       "width": 64,
       "height": 64,
+      "rawWidth": 64,
+      "rawHeight": 64,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,

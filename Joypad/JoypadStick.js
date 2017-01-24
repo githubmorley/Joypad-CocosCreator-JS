@@ -4,25 +4,25 @@ cc.Class({
     properties: {
         SJ_PI_X_2: { // ２π
             default: Math.PI * 2, // デフォルト値
-            type: Number, // Number型
+            type: cc.Float, // 型
             visible: false, // 『Proeperties』パネルに表示しない
             readonly: true, // 読み取りのみ
         },
         SJ_DEG2RAD: { // 角度からラジアンへの変換係数
             default: Math.PI / 180, // デフォルト値
-            type: Number, // Number型
+            type: cc.Float, // 型
             visible: false, // 『Proeperties』パネルに表示しない
             readonly: true, // 読み取りのみ
         },
-        SJ_RAD2DEG: { // Number型 // ラジアンから角度への変換係数
+        SJ_RAD2DEG: { // ラジアンから角度への変換係数
             default: 180 / Math.PI, // デフォルト値
-            type: Number, // Number型
+            type: cc.Float, // 型
             visible: false, // 『Proeperties』パネルに表示しない
             readonly: true, // 読み取りのみ
         },
         Thumb: { // ジョイスティックの部分のノード
             default: null, // デフォルト値
-            type: cc.Node, // cc.Node型
+            type: cc.Node, // 型
             visible: false, // 『Proeperties』パネルに表示しない
         },
         Directions: 8, // 方向数
@@ -34,15 +34,12 @@ cc.Class({
     	_degrees: 0, // ジョイスティックの角度
 	    _velocity: cc.Vec2.ZERO, // スティックの値
 	    JoystickRadius: { // ジョイスティックの半径 0の場合は、背景画像の幅の1/2に設定
-	        default: 0,
-	        type: Number,
-	        tooltip: "if 0 then radius = Image.Width / 2",
+	        default: 0, // デフォルト値
+	        type: cc.Integer, // 型
+	        tooltip: "if 0 then radius = Image.Width / 2", // 説明
 	    },
 	    _JoystickRadiusSq: 0, // ジョイスティックの半径の２乗
-	    _stickPosition: { // スティックの表示位置
-            default: cc.Vec2.ZERO, // デフォルト値=(0, 0)
-            type: cc.Vec2, // (x, y)の型
-        },
+	    _stickPosition: cc.Vec2.ZERO, // スティックの表示位置(0, 0)
 	    _centerPosition: cc.Vec2.ZERO, // ジョイスティックの中心座標
 	    _running: false, // ループ実行中フラグ、true:実行中、false：停止中
     },

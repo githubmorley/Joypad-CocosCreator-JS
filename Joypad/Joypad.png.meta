@@ -6,7 +6,7 @@
   "filterMode": "bilinear",
   "subMetas": {
     "Joypad": {
-      "ver": "1.0.2",
+      "ver": "1.0.3",
       "uuid": "a5d454e8-1a8a-413e-b0f3-cef1d7f7341a",
       "rawTextureUuid": "f40c67f2-ed37-46fa-bc0e-120216147586",
       "trimType": "auto",
@@ -18,6 +18,8 @@
       "trimY": 3,
       "width": 126,
       "height": 398,
+      "rawWidth": 256,
+      "rawHeight": 512,
       "borderTop": 0,
       "borderBottom": 0,
       "borderLeft": 0,

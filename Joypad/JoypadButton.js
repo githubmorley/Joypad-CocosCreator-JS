@@ -4,20 +4,20 @@ cc.Class({
     properties: {
         defaultSF: { // デフォルト状態の画像
             default: null, // デフォルト値
-            type: cc.SpriteFrame, // cc.SpriteFrame型
+            type: cc.SpriteFrame, // 型
             visible: false, // 『Proeperties』パネルに表示しない
         },
         disabledSF: { // 無効状態の画像
             default: null, // デフォルト値
-            type: cc.SpriteFrame, // cc.SpriteFrame型
+            type: cc.SpriteFrame, // 型
         },
         pressedSF: { // 押下状態の画像
             default: null, // デフォルト値
-            type: cc.SpriteFrame, // cc.SpriteFrame型
+            type: cc.SpriteFrame, // 型
         },
         _spriteButton: { // ボタンのスプライト
             default: null, // デフォルト値
-            type: cc.Sprite, // cc.Sprite型
+            type: cc.Sprite, // 型
         },
         isHoldable: false, // ホールド機能 true:ボタンを離すまでON、false:"_rateLimit"時間だけON（すぐOFF）
         isToggleable: false,  // トグル機能
@@ -26,7 +26,7 @@ cc.Class({
 	    _active: false, // ボタンの処理状態、true:処理中、false:処理受付中
         Radius: { // ボタンの半径
             default: 0, // デフォルト値
-            type: Number, // Number型
+            type: cc.Integer, // 型
             tooltip: "if 0 then Radius = Image.Width / 2",
         },
         _radiusSq: 0, // ボタンの半径の２乗
